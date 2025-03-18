@@ -1,0 +1,29 @@
+<html>
+ <head>
+   <title>apply run time CSS</title>
+   <style>
+     input{
+	   width:400px;
+	   height:40px;
+	   border-radius:10px;
+	  }
+   </style>
+   <script type='text/javascript'>
+                let q,r,t;
+	  function acceptQty(val){
+	    q=val;
+	  }
+	  function acceptRate(val){   
+		t=q*val;
+		 document.getElementById("total").value=""+t;
+	  }	 
+   </script>
+ </head>
+ <body>
+ <br><br>
+   <input type='text' name='qty' id='qty' value='' onkeyup="acceptQty(this.value)"/><br><br>
+   <input type='text' name='rate' id='rate' value='' onkeyup="acceptRate(this.value)"/><br><br>
+   <input type='text' name='total' id='total' value='' /><br><br>
+ </body>
+</html>
+
