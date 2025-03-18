@@ -1,0 +1,29 @@
+<html>
+<head>
+ <title>dom example</title>
+ <script type='text/javascript'>
+    function show(){
+	   var firstText=document.getElementById("first");//access text box
+	   var secondText=document.getElementById("second");//access text box.
+	   var first=firstText.value; //first store data in the form of string 
+	   var second=secondText.value;//second store data in the form of string.
+	   var result=parseInt(first)+parseInt(second);
+	   var heading=document.getElementById("h");
+	   heading.innerHTML="Addition is "+result;
+	}
+ </script>
+ <style>
+   input{
+      width:400px;
+	  height:40px;
+	  border-radius:10px;
+   }
+ </style>
+</head>
+<body>
+ <input type='text' name='n' value='' id='first' /> <br><br>
+ <input type='text' name='n1' value='' id='second' /> <br><br>
+ <input type='button' name='s' value='Show Data' onclick="show();"/><br><br>
+ <h1 id="h"></h1>
+</body>
+</html>
